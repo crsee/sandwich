@@ -64,8 +64,8 @@ public class JsonUtils {
     private static List<String> parseStringArray(JSONArray jsonArray) {
         List<String> stringArray = null;
         if (jsonArray != null) {
+            stringArray = new ArrayList<>();
             for (int i = 0; i < jsonArray.length(); i++) {
-                stringArray = new ArrayList<>();
                 stringArray.add(jsonArray.optString(i));
             }
         }
