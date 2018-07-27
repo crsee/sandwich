@@ -76,6 +76,7 @@ public class DetailActivity extends AppCompatActivity {
             mOriginTv.setText(sandwich.getPlaceOfOrigin());
         } else {
             mOriginTv.setText(R.string.not_available);
+
         }
         mDescriptionTv.setText(sandwich.getDescription());
 
