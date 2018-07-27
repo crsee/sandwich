@@ -75,22 +75,22 @@ public class DetailActivity extends AppCompatActivity {
         if (sandwich.getPlaceOfOrigin() != null && !sandwich.getPlaceOfOrigin().isEmpty()) {
             mOriginTv.setText(sandwich.getPlaceOfOrigin());
         } else {
-            mOriginTv.setText("");
+            mOriginTv.setText(R.string.not_available);
         }
         mDescriptionTv.setText(sandwich.getDescription());
 
         if (sandwich.getAlsoKnownAs() != null && !sandwich.getAlsoKnownAs().isEmpty()) {
             List<String> alsoKnownAsList = sandwich.getAlsoKnownAs();
             for (String knownAs : alsoKnownAsList) {
-                mKnownAsTv.append(knownAs + ", ");
+                mKnownAsTv.append(knownAs + "\n");
             }
         } else {
-            mKnownAsTv.setText("");
+            mKnownAsTv.setText(R.string.not_available);
         }
         if (sandwich.getIngredients() != null) {
             List<String> ingredientList = sandwich.getIngredients();
             for (String ingredient : ingredientList) {
-                mIngredientsTv.append(" " + ingredient + "\n \n ");
+                mIngredientsTv.append(ingredient + "\n \n");
             }
         } else {
             mIngredientsTv.setText("");
