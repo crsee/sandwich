@@ -34,7 +34,7 @@
                 android:text="@string/detail_also_known_as_label"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
-                android:textSize="18sp"
+                android:textSize="@dimen/large_font"
                 android:textStyle="bold" />
 
             <TextView
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/small_margin"
-                android:textSize="16sp"
+                android:textSize="@dimen/small_font"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:layout_marginStart="@dimen/small_margin"
@@ -58,7 +58,6 @@
             android:layout_marginLeft="@dimen/large_margin"
             android:layout_marginRight="@dimen/small_margin"
             android:layout_marginStart="@dimen/large_margin"
-            android:layout_marginTop="@dimen/small_margin"
             android:background="@color/colorPrimaryDark" />
 
         <LinearLayout
@@ -74,6 +73,7 @@
                 android:text="@string/detail_place_of_origin_label"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:textSize="@dimen/large_font"
                 android:textStyle="bold" />
 
             <TextView
@@ -83,6 +83,7 @@
                 android:layout_marginLeft="@dimen/small_margin"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textSize="@dimen/small_font"
                 android:layout_marginStart="@dimen/small_margin" />
 
         </LinearLayout>
@@ -95,7 +96,6 @@
             android:layout_marginLeft="@dimen/large_margin"
             android:layout_marginRight="@dimen/small_margin"
             android:layout_marginStart="@dimen/large_margin"
-            android:layout_marginTop="@dimen/small_margin"
             android:background="@color/colorPrimaryDark" />
 
         <LinearLayout
@@ -110,6 +110,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/detail_description_label"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:textSize="@dimen/large_font"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:textStyle="bold" />
 
@@ -121,7 +122,8 @@
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginStart="@dimen/large_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:maxEms="24" />
+                android:maxEms="20"
+                android:textSize="@dimen/small_font" />
 
         </LinearLayout>
 
@@ -133,7 +135,6 @@
             android:layout_marginLeft="@dimen/large_margin"
             android:layout_marginRight="@dimen/small_margin"
             android:layout_marginStart="@dimen/large_margin"
-            android:layout_marginTop="@dimen/small_margin"
             android:background="@color/colorPrimaryDark" />
 
         <LinearLayout
@@ -147,6 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/detail_ingredients_label"
+                android:textSize="@dimen/large_font"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:layout_marginStart="@dimen/activity_horizontal_margin"
                 android:textStyle="bold" />
@@ -158,6 +160,7 @@
                 android:layout_marginLeft="@dimen/large_margin"
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:textSize="@dimen/small_font"
                 android:layout_marginStart="@dimen/large_margin" />
 
         </LinearLayout>
