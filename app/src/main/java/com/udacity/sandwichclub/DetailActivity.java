@@ -76,6 +76,7 @@ public class DetailActivity extends AppCompatActivity {
             mOriginTv.setText(sandwich.getPlaceOfOrigin());
         } else {
             mOriginTv.setText(R.string.not_available);
+            mOriginTv.setTextColor(getResources().getColor(R.color.unavailable));
 
         }
         mDescriptionTv.setText(sandwich.getDescription());
@@ -87,6 +88,7 @@ public class DetailActivity extends AppCompatActivity {
             }
         } else {
             mKnownAsTv.setText(R.string.not_available);
+            mKnownAsTv.setTextColor(getResources().getColor(R.color.unavailable));
         }
         if (sandwich.getIngredients() != null) {
             List<String> ingredientList = sandwich.getIngredients();

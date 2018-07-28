@@ -16,15 +16,18 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:adjustViewBounds="true"
-            android:layout_weight="4"
-            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_weight="5"
             android:contentDescription="@string/sandwich_picture_content_description"
             android:scaleType="centerCrop" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_weight="0.5"
             android:orientation="horizontal">
 
@@ -52,7 +55,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1.5dp"
             android:layout_marginBottom="@dimen/small_margin"
             android:layout_marginEnd="@dimen/small_margin"
             android:layout_marginLeft="@dimen/large_margin"
@@ -90,7 +93,7 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1.5dp"
             android:layout_marginBottom="@dimen/small_margin"
             android:layout_marginEnd="@dimen/small_margin"
             android:layout_marginLeft="@dimen/large_margin"
@@ -102,7 +105,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             android:orientation="horizontal">
 
             <TextView
@@ -122,14 +125,14 @@
                 android:layout_marginEnd="@dimen/activity_horizontal_margin"
                 android:layout_marginStart="@dimen/large_margin"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:maxEms="20"
+                android:maxEms="25"
                 android:textSize="@dimen/small_font" />
 
         </LinearLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1.5dp"
             android:layout_marginBottom="@dimen/small_margin"
             android:layout_marginEnd="@dimen/small_margin"
             android:layout_marginLeft="@dimen/large_margin"
@@ -140,7 +143,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             android:layout_margin="@dimen/small_margin"
             android:orientation="horizontal">
 

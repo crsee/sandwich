@@ -7,4 +7,6 @@
     </color>
     <color name="colorAccent">#ff471a
     </color>
+    <color name="unavailable">#adb7c1
+    </color>
 </resources>
