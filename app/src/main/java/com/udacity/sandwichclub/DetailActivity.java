@@ -61,6 +61,8 @@ public class DetailActivity extends AppCompatActivity {
         populateUI(sandwich);
         Picasso.with(this)
                 .load(sandwich.getImage())
+                .placeholder(R.mipmap.ic_launcher)
+                .error(R.mipmap.ic_launcher)
                 .into(ingredientsIv);
 
         setTitle(sandwich.getMainName());
@@ -83,20 +85,37 @@ public class DetailActivity extends AppCompatActivity {
 
         if (sandwich.getAlsoKnownAs() != null && !sandwich.getAlsoKnownAs().isEmpty()) {
             List<String> alsoKnownAsList = sandwich.getAlsoKnownAs();
-            for (String knownAs : alsoKnownAsList) {
-                mKnownAsTv.append(knownAs + "\n");
-            }
+            getFromattedString(alsoKnownAsList);
         } else {
             mKnownAsTv.setText(R.string.not_available);
             mKnownAsTv.setTextColor(getResources().getColor(R.color.unavailable));
         }
         if (sandwich.getIngredients() != null) {
             List<String> ingredientList = sandwich.getIngredients();
-            for (String ingredient : ingredientList) {
-                mIngredientsTv.append(ingredient + "\n \n");
-            }
+            getFromattedString(ingredientList);
         } else {
             mIngredientsTv.setText("");
         }
+    }
+
+    /**
+     * method to convert List<String> to String
+     *
+     * @param list is the input
+     * @return a String
+     */
+    private String getFromattedString(List<String> list) {
+        StringBuilder stringBuilder = new StringBuilder();
+        int size = list.size();
+        if (size > 0) {
+            for (int i = 0; i < size; i++) {
+                stringBuilder.append(list.get(i));
+                if (i != size - 1) {
+                    stringBuilder.append("\n");
+
+                }
+            }
+        }
+        return stringBuilder.toString();
     }
 }

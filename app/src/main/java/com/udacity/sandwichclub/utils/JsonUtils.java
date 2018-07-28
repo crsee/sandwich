@@ -11,6 +11,13 @@ import java.util.List;
 
 public class JsonUtils {
 
+    private static final String KEY_NAME = "name";
+    private static final String KEY_MAIN_NAME = "mainName";
+    private static final String KEY_ALSO_KNOWN_AS = "alsoKnownAs";
+    private static final String KEY_DESCRIPTION = "description";
+    private static final String KEY_IMAGE = "image";
+    private static final String KEY_ORIGIN = "placeOfOrigin";
+    private static final String KEY_INGREDIENTS = "ingredients";
     /**
      * Returns a list of {@link Sandwich} objects that has been built up from
      * parsing JSON data
@@ -26,26 +33,26 @@ public class JsonUtils {
 
         try {
             JSONObject baseJsonObject = new JSONObject(json);
-            JSONObject name = baseJsonObject.getJSONObject("name");
+            JSONObject name = baseJsonObject.getJSONObject(KEY_NAME);
 
             // sandwich name
-            String mainName = name.getString("mainName");
+            String mainName = name.getString(KEY_MAIN_NAME);
 
             // sandwich alias
-            JSONArray alsoKnownAsArray = name.getJSONArray("alsoKnownAs");
+            JSONArray alsoKnownAsArray = name.getJSONArray(KEY_ALSO_KNOWN_AS);
             List<String> alsoKnownAs = parseStringArray(alsoKnownAsArray);
 
             // sandwich place of origin
-            String origin = baseJsonObject.getString("placeOfOrigin");
+            String origin = baseJsonObject.getString(KEY_ORIGIN);
 
             // sandwich description
-            String description = baseJsonObject.getString("description");
+            String description = baseJsonObject.getString(KEY_DESCRIPTION);
 
             // sandwich image
-            String image = baseJsonObject.getString("image");
+            String image = baseJsonObject.getString(KEY_IMAGE);
 
             // sandwich ingredient
-            JSONArray ingredientArray = baseJsonObject.getJSONArray("ingredients");
+            JSONArray ingredientArray = baseJsonObject.getJSONArray(KEY_INGREDIENTS);
             List<String> ingredients = parseStringArray(ingredientArray);
 
             return new Sandwich(mainName, alsoKnownAs, origin, description, image, ingredients);
